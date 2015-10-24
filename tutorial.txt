@@ -1,0 +1,7 @@
+#下面是使用说明
+hk-yuewan 文件夹下是django的目录（暂时设置development环境）。  
+可以使用manage.py runserver 的方式使用。  
+
+所有后台的数据库的调用接口都已经预留。  
+
+但是由于用户行为分析涉及到supervised learning 由于比赛时间有限，没有足够的样本完成ai的实现，导致此项功能暂时缺失。  
