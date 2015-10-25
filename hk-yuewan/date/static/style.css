@@ -324,8 +324,53 @@ body {
 }
 
 .login {
-	width: 950px;
-	border: 1px solid gray;
+	margin: 0 auto;
+	width: 600px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 20px 30px;
+}
+
+.login-header {
+	border-bottom: 1px solid #e6e6e6;
+	margin-bottom: 20px;
+}
+
+.login-header h2 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: Arial;
+	margin: 10px 0px;
+}
+
+.user-form {
+	width: 98%;
+}
+
+.user-form-wrapper {
+	margin-bottom: 10px;
+}
+
+.user-form-head {
+	text-align: right;
+	width: 100px;
+	display: inline-block;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.user-form-head span {
+	color: red;
+}
+
+.user-form-wrapper input {
+	margin-left: 10px;
+	width: 450px;
+}
+
+.user-form-wrapper button, .user-form-wrapper select {
+	margin-left: 10px;
 }
 
 .footer {

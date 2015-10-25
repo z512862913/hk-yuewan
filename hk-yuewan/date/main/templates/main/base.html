@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{% block title %}首页{% endblock %} - 约吗</title>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css">
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="header-left">
+				<a class="header-logo" href="">
+					<span><img src="img/logo.jpg" alt="logo" /></span>
+				</a>
+				<div class="header-city">
+					<span>武汉</span>
+					<a class="header-link" href="">切换城市<div class="triangle"></div></a>
+				</div>
+			</div>
+			<div class="header-right">
+				{% if user.is_authenticated %}
+					<a class="header-avatar" href="">
+						<img width="40px" height="40px" src="img/avatar.jpg" alt="avatar" />
+					</a>
+					<div class="header-username">{{user.username}}</div>
+					<div class="header-btn">
+						<a class="header-link" href="/logout">注销</a>
+					</div>
+				{% else %}
+					<a style="opacity: 0" class="header-avatar"></a>
+				 	<div class="header-btn">
+						<a class="header-link" href="/login">登入</a>
+					</div>
+					<div class="header-btn">
+						<a class="header-link" href="/register">注册</a>
+					</div>
+				{% endif %}
+			</div>
+			<div>
+			</div>
+		</div>
+		
+		{% block content %}
+			<div>show as default</div>
+		{% endblock %}
+
+		<div class="footer">
+		</div>
+	</body>
+</html>

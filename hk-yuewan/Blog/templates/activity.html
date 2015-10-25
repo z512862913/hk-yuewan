@@ -8,7 +8,37 @@
 
 	<body>
 		<div class="header">
+			<div class="header-left">
+				<a class="header-logo" href="">
+					<span><img src="img/logo.jpg" alt="logo" /></span>
+				</a>
+				<div class="header-city">
+					<span>武汉</span>
+					<a class="header-link" href="">切换城市<div class="triangle"></div></a>
+				</div>
+			</div>
+			<div class="header-right">
+				{% if user.is_authenticated %} 
+					<a class="header-avatar" href="">
+						<img width="40px" height="40px" src="img/avatar.jpg" alt="avatar" />
+					</a>
+					<div class="header-username">{{user.username}}</div>
+					<div class="header-btn">
+						<a class="header-link" href="/logout">注销</a>
+					</div>
+				{% else %}
+				 	<div class="head1er-btn">
+						<a class="header-link" href="/login">登入</a>
+					</div>
+					<div class="header-btn">
+						<a class="header-link" href="/register">注册</a>
+					</div>
+				{% endif %}
+			</div>
+			<div>
+			</div>
 		</div>
+
 		<div class="content">
 			<div class="activity">
 				<div class="acvitity-header">
@@ -61,7 +91,9 @@
 				</div>
 			</div>
 			<div class="participant">
-				<h1>参与人员</h1>
+				<div class="participant-header">
+					<h2>当前报名人员</h2>
+				</div>
 				<ul>
 					<li>
 						<div class="participant-avatar">
